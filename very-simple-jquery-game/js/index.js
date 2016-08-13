@@ -1,50 +1,49 @@
 var counter = 0;
 var seconds = 0;
-$('#counter span').html(counter);
-$('#timer span').html(seconds);
+document.getElementById("counter").getElementsByTagName("span")[0].innerHTML=counter;
+document.getElementById("timer").getElementsByTagName("span")[0].innerHTML=seconds;
 
-$('#start').hide();
-$('#win').hide();
-$('#endScreen').hide();
+document.getElementById('start').hidden = true; 
+document.getElementById('win').hidden = true;
+document.getElementById('endScreen').hidden = true;
 
-$('#startGame').on( "mouseover", function() {
-  $(this).hide();
-  
+document.getElementById("startGame").onmouseover = function() {
+  document.getElementById("startGame").hidden = true;
   var randWidth = random = Math.ceil(Math.random() * 350);
   var randHeight = random = Math.ceil(Math.random() * 350);
   
-  $('#win').show('fast');
-  $('#win').css('top', randHeight);
-  $('#win').css('left', randWidth);
+  document.getElementById("win").hidden = false;
+  document.getElementById("win").style.top = randHeight;
+  document.getElementById("win").style.left = randWidth;
   
    window.setInterval(function(){
       seconds = seconds + 1;
-      $('#timer span').html(seconds);
+      document.getElementById("timer").getElementsByTagName("span")[0].innerHTML=seconds;
     }, 1000); 
-});
+};
 
-$('#start').on( "mouseover", function() {
+document.getElementById('start').onmouseover = function() {
   
   var randWidth = random = Math.ceil(Math.random() * 350);
   var randHeight = random = Math.ceil(Math.random() * 350);
   
-  $('#win').show('fast');
-  $('#win').css('top', randHeight);
-  $('#win').css('left', randWidth);
-  $(this).hide('fast');
-});
+  document.getElementById('win').hidden = false;
+  document.getElementById('win').style.top = randHeight;
+  document.getElementById('win').style.left = randWidth);
+  document.getElementById('start').hidden = true;
+};
 
-$('#win').on( "mouseover", function() {
+document.getElementById('win').onmouseover = function() {
   counter = counter + 1;
-  $('#counter span').html(counter);
+  document.getElementById("counter").getElementsByTagName("span")[0].innerHTML = counter;
   
   if(counter == 10){
-  $('#endScreen').show('medium');
-    $('#endCount').html(counter);
-    $('#endSeconds').html(seconds);
+  document.getElementById('endScreen').hidden = false;
+    document.getElementById("endCount").innerHTML = counter;
+    document.getElementById("endSeconds").innerHTML = seconds;
   }
   
-  $(this).hide('fast');
-  $('#start').show('fast');
+  document.getElementById('win').hidden = true;
+  document.getElementById('start').hidden = false;
   
-});
+};
