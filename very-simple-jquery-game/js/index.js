@@ -9,8 +9,8 @@ document.getElementById('endScreen').hidden = true;
 
 document.getElementById("startGame").onmouseover = function() {
   document.getElementById("startGame").hidden = true;
-  var randWidth = random = Math.ceil(Math.random() * 350);
-  var randHeight = random = Math.ceil(Math.random() * 350);
+  var randWidth = Math.ceil(Math.random() * 350);
+  var randHeight  = Math.ceil(Math.random() * 350);
   
   document.getElementById("win").hidden = false;
   document.getElementById("win").style.top = randHeight;
@@ -24,12 +24,12 @@ document.getElementById("startGame").onmouseover = function() {
 
 document.getElementById('start').onmouseover = function() {
   
-  var randWidth = random = Math.ceil(Math.random() * 350);
-  var randHeight = random = Math.ceil(Math.random() * 350);
+  var randWidth  = Math.ceil(Math.random() * 350);
+  var randHeight = Math.ceil(Math.random() * 350);
   
   document.getElementById('win').hidden = false;
   document.getElementById('win').style.top = randHeight;
-  document.getElementById('win').style.left = randWidth);
+  document.getElementById('win').style.left = randWidth;
   document.getElementById('start').hidden = true;
 };
 
