@@ -10,11 +10,11 @@ document.getElementById('endScreen').hidden = true;
 document.getElementById("startGame").onmouseover = function() {
   document.getElementById("startGame").hidden = true;
   var randWidth = Math.ceil(Math.random() * 350);
-  var randHeight  = Math.ceil(Math.random() * 350);
+  var randHeight = Math.ceil(Math.random() * 350);
   
   document.getElementById("win").hidden = false;
-  document.getElementById("win").style.top = randHeight;
-  document.getElementById("win").style.left = randWidth;
+  document.getElementById("win").style.top = randHeight + 'px';
+  document.getElementById("win").style.left = randWidth + 'px';
   
    window.setInterval(function(){
       seconds = seconds + 1;
@@ -25,11 +25,11 @@ document.getElementById("startGame").onmouseover = function() {
 document.getElementById('start').onmouseover = function() {
   
   var randWidth  = Math.ceil(Math.random() * 350);
-  var randHeight = Math.ceil(Math.random() * 350);
+  var randHeight  = Math.ceil(Math.random() * 350);
   
   document.getElementById('win').hidden = false;
-  document.getElementById('win').style.top = randHeight;
-  document.getElementById('win').style.left = randWidth;
+  document.getElementById('win').style.top = randHeight + 'px';
+  document.getElementById('win').style.left = randWidth + 'px';
   document.getElementById('start').hidden = true;
 };
 
